@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Landing = () => {
+const Blog = () => {
 	return (
 		<div>
-
+			Blog component
 		</div>
 	)
 }
 
-export default Landing
+export default Blog

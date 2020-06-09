@@ -1,37 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Scada:wght@400;700&display=swap');
 @import 'variables';
 @import 'reset';
+@import 'utilities';
 
-body {
-	font-family: 'Scada', sans-serif;
-	font-weight: 400;
-	color: $black;
-	background-color: $white;
-	
-	#root, .App {
-		min-height: 100vh;
-	}
-}
-#wrapper {
-	height: calc(100vh - 64px);
-	max-width: 1366px;
-	background-color: $light;
-	margin: 0 auto;
-}
-h1 {font-weight: 700}
-header {
+.header {
 	padding: .5rem;
-	background-color: $primary;
+	background-color: $light;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	-webkit-box-shadow: 0px 5px 20px 0px rgba(0,16,19,0.48);
+	-moz-box-shadow: 0px 5px 20px 0px rgba(0,16,19,0.48);
+	box-shadow: 0px 5px 20px 0px rgba(0,16,19,0.48);
+	margin-bottom: 1.5rem;
 
-	.app-title span {
-		font-size: 2rem;
-		font-weight: 700;
-		font-style: italic;
-	}
-	#nav-container {
+	&__navigation {
 		float: right;
 		text-align: right;
 		margin-top: auto;
@@ -40,8 +23,58 @@ header {
 		ul {
 			display: flex;
 			li {
-				margin: auto .5rem ;
-			};
+				margin: auto .5rem;
+				font-size: 1.5rem;
+				a {
+					color: $black;
+				}
+			}
+		}
+	}
+}
+.footer {
+	padding: .5rem;
+	background-color: $dark;
+	color: $white;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	a {
+		color: $white;
+		&:hover {
+			color: $light;
+			text-decoration: none;
+		}
+	}
+	ul {
+		display: flex;
+	}
+	&__social {
+		font-size: 2rem;
+	}
+	&__navigation {
+		margin-top: auto;
+		margin-bottom: auto;
+		ul {
+			li {
+				margin-right: 3rem;
+				i {
+					margin-right: .5rem;
+				}
+			}
+		}
+	}
+}
+i {margin-right: 1rem;}
+.contact {
+	&__blurb {}
+	&__info {}
+	&__form{}
+	&__support{}
+	&__map{
+		iframe {
+			width:100%;
+			min-height:400px;
 		}
 	}
 }

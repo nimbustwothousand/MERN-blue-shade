@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Shop = () => {
+const Home = () => {
 	return (
 		<div>
-
+			Home component
 		</div>
 	)
 }
 
-export default Shop
+export default Home
