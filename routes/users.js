@@ -1,5 +1,7 @@
 const router = require('express').Router();
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+require('dotenv').config();
 const User = require('../models/User');
 
 // @route POST /api/users
@@ -31,12 +33,51 @@ router.post('/', (req, res) => {
 				bcrypt.hash(newUser.password, salt, (err, hash) => {
 					if (err) throw err;
 					newUser.password = hash;
-					newUser.save().then(user => {
-						res.status(200).json({ user: { id: user._id, email: user.email } })
-					})
-				})
-			})
-		})
+					newUser.save()
+						.then(user => {
+							jwt.sign(
+								{ id: user._id },
+								process.env.JWT_SECRET,
+								{ expiresIn: 86400 },
+								(err, token) => {
+									if (err) throw err;
+									res.status(200).json({ user: { id: user._id, email: user.email }, token })
+								}
+							);
+						});
+				});
+			});
+		});
 });
 
+// @route POST /api/users/login
+// @desc authenticates a user
+// @access public
+router.post('/login', (req, res) => {
+	const { email, password } = req.body;
+	// all fields must be entered
+	if (!email || !password) {
+		return res.status(400).json({ message: 'Please enter all fields.' });
+	}
+	User.findOne({ email })
+		.then(user => {
+			if (!user) return res.status(400).json({ message: "User does not exist" });
+
+			//validate password
+			bcrypt.compare(password, user.password)
+				.then(isMatch => {
+					if (!isMatch) return res.status(400).json({ message: "Invalid credentials" });
+
+					jwt.sign(
+						{ id: user._id },
+						process.env.JWT_SECRET,
+						{ expiresIn: 86400 },
+						(err, token) => {
+							if (err) throw err;
+							res.status(200).json({ user: { id: user._id, email: user.email }, token })
+						}
+					);
+				})
+		});
+});
 module.exports = router
