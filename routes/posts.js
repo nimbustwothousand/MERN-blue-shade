@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Post = require('../models/Posts');
+const Post = require('../models/Post');
 
 // @route GET /api/posts */
 // @desc get all posts

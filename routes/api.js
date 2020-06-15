@@ -6,6 +6,10 @@ router.get('/', (req, res) => {
 	res.send('GET request made to /api/')
 })
 
+// @route /api/users
+const users = require('./users')
+router.use('/users', users);
+
 // @route /api/shoes
 const shoes = require('./shoes')
 router.use('/shoes', shoes);
