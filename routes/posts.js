@@ -1,8 +1,10 @@
 const router = require('express').Router();
+const auth = require('../middleware/auth');
 const Post = require('../models/Post');
 
 // @route GET /api/posts */
 // @desc get all posts
+// @access public
 router.get('/', (req, res) => {
 	Post.find()
 		.then(posts => {
@@ -12,7 +14,8 @@ router.get('/', (req, res) => {
 
 // @route POST /api/posts/new
 // @desc create new blog post
-router.post('/new', (req, res) => {
+// @access private
+router.post('/new', auth, (req, res) => {
 	const newPost = new Post({
 		title: req.body.title,
 		excerpt: stringTruncate(req.body.body),
@@ -34,7 +37,8 @@ stringTruncate = (str) => {
 
 // @route DEL /api/posts/:id
 // @desc delete a post by id
-router.delete('/:id', (req, res) => {
+// @access private
+router.delete('/:id', auth, (req, res) => {
 	Post.findById(req.params.id)
 		.then(post => post.remove()
 			.then(() => res.json({ success: true })))

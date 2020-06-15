@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const auth = require('../middleware/auth');
 require('dotenv').config();
 const User = require('../models/User');
 
@@ -50,10 +51,10 @@ router.post('/', (req, res) => {
 		});
 });
 
-// @route POST /api/users/login
+// @route POST /api/users/auth
 // @desc authenticates a user
 // @access public
-router.post('/login', (req, res) => {
+router.post('/auth', (req, res) => {
 	const { email, password } = req.body;
 	// all fields must be entered
 	if (!email || !password) {
@@ -80,4 +81,14 @@ router.post('/login', (req, res) => {
 				})
 		});
 });
+
+// @route GET /api/users/user
+// @desc get user data
+// @access private
+router.get('/user', auth, (req, res) => {
+	User.findById(req.user.id)
+		.select('-password')
+		.then(user => { res.json(user) })
+});
+
 module.exports = router

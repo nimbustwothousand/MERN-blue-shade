@@ -1,8 +1,10 @@
 const router = require('express').Router();
+const auth = require('../middleware/auth');
 const Shoe = require('../models/Shoe');
 
 // @route GET /api/shoes
 // @desc get all shoes
+// @access public
 router.get('/', (req, res) => {
 	Shoe.find()
 		.then(shoes => {
@@ -12,7 +14,8 @@ router.get('/', (req, res) => {
 
 // @route POST /api/shoes/new
 // @desc create new shoes
-router.post('/new', (req, res) => {
+// @access private
+router.post('/new', auth, (req, res) => {
 	const newShoes = new Shoe({
 		name: req.body.name,
 		price: req.body.price,
@@ -26,7 +29,8 @@ router.post('/new', (req, res) => {
 
 // @route DEL /api/shoes/:id
 // @desc delete shoes by id
-router.delete('/:id', (req, res) => {
+// @access private
+router.delete('/:id', auth, (req, res) => {
 	Shoe.findById(req.params.id)
 		.then(shoes => shoes.remove()
 			.then(() => res.json({ success: true })))

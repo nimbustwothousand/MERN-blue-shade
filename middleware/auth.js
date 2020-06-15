@@ -10,11 +10,12 @@ function auth(req, res, next) {
 	try {
 		const decoded = jwt.verify(token, process.env.JWT_SECRET);
 		// add user from payload
+		// console.log(decoded)
+		// res.setHeader('x-auth-user-id', decoded.id);
 		req.user = decoded;
-		next();
 	} catch (error) {
 		res.status(400).json({ message: 'Token is not valid.' })
-		next();
 	}
+	next();
 }
 module.exports = auth;
