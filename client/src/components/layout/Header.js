@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import Logo from '../../media/logo83x192.png';
 const Header = () => {
+	if (window.location.pathname === '/admin') return null;
 	return (
 		<header className="header">
 			<div className="header__logo">

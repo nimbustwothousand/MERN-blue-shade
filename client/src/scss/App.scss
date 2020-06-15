@@ -65,7 +65,7 @@
 		}
 	}
 }
-i {margin-right: 1rem;}
+
 .contact {
 	&__blurb {}
 	&__info {}
@@ -75,6 +75,40 @@ i {margin-right: 1rem;}
 		iframe {
 			width:100%;
 			min-height:400px;
+		}
+	}
+}
+.admin {
+	position: relative;
+	height: 100%;
+	&__container {
+		position: absolute;
+    top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		padding: 2rem;
+		width: 22rem;
+		max-width: 100%;
+		background: $dark;
+		color: $white;
+		border-radius: 5%;
+		h1 {
+			text-align: center;
+		}
+		.input-container {
+			width: 100%;
+			margin: 1rem 0;
+			* {
+				width: 100%;
+			}
+		}
+		.button-container {
+			width: 100%;
+			margin: 1rem 0;
+			button {
+				width: 100%;
+				cursor: pointer;
+			}
 		}
 	}
 }

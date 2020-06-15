@@ -32,7 +32,7 @@ router.post('/', (req, res) => {
 			//create salt and hash
 			bcrypt.genSalt(12, (err, salt) => {
 				bcrypt.hash(newUser.password, salt, (err, hash) => {
-					if (err) throw err;
+					if (err) return res.status(400).json({ message: err.message });
 					newUser.password = hash;
 					newUser.save()
 						.then(user => {
@@ -41,7 +41,7 @@ router.post('/', (req, res) => {
 								process.env.JWT_SECRET,
 								{ expiresIn: 86400 },
 								(err, token) => {
-									if (err) throw err;
+									if (err) return res.status(400).json({ message: err.message });
 									res.status(200).json({ user: { id: user._id, email: user.email }, token })
 								}
 							);
@@ -52,7 +52,7 @@ router.post('/', (req, res) => {
 });
 
 // @route POST /api/users/auth
-// @desc authenticates a user
+// @desc login a user
 // @access public
 router.post('/auth', (req, res) => {
 	const { email, password } = req.body;
@@ -74,7 +74,7 @@ router.post('/auth', (req, res) => {
 						process.env.JWT_SECRET,
 						{ expiresIn: 86400 },
 						(err, token) => {
-							if (err) throw err;
+							if (err) return res.status(400).json({ message: err.message });
 							res.status(200).json({ user: { id: user._id, email: user.email }, token })
 						}
 					);
