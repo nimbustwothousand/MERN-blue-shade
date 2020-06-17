@@ -75,7 +75,11 @@ router.post('/auth', (req, res) => {
 						{ expiresIn: 86400 },
 						(err, token) => {
 							if (err) return res.status(400).json({ message: err.message });
-							res.status(200).json({ user: { id: user._id, email: user.email }, token })
+							res.status(200).json({
+								user: {
+									_id: user._id, email: user.email, createdAt: user.createdAt, updatedAt: user.updatedAt, __v: user.__v
+								}, token
+							})
 						}
 					);
 				})

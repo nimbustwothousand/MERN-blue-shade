@@ -12,7 +12,7 @@ export const AuthContext = createContext(initialState);
 
 export const AuthProvider = ({ children, ...rest }) => {
 	const [state, dispatch] = useReducer(authReducer, initialState)
-	const auth = { state, ACTIONS }
+	const auth = { state, dispatch, ACTIONS }
 
 	useEffect(() => {
 		ACTIONS.loadUser(state, dispatch)

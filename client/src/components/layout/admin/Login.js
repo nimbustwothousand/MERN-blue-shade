@@ -20,9 +20,7 @@ const Login = () => {
 	}
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		const data = auth.ACTIONS.login(state.email, state.password)
-		console.log(data);
-		//if (data.error)
+		auth.ACTIONS.login(state, auth.dispatch);
 	}
 	if (auth.state.isAuthenticated) {
 		return (
