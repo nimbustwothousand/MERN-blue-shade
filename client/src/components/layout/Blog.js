@@ -2,9 +2,9 @@ import React from 'react'
 
 const Blog = () => {
 	return (
-		<div className="page-blog">
+		<main id="wrapper" className="page blog">
 			Blog component
-		</div>
+		</main>
 	)
 }
 

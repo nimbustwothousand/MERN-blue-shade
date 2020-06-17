@@ -26,7 +26,6 @@ export const loadUser = (state, dispatch) => {
 
 export const login = (componentState, dispatch) => {
 	const { email, password } = componentState;
-	console.log('login attempted');
 	axios.post('/api/users/auth', { email, password })
 		.then(res => {
 			localStorage.setItem('blue-shades-token', res.data.token)
@@ -40,4 +39,7 @@ export const login = (componentState, dispatch) => {
 		}).catch(err => {
 			dispatch({ type: ACTION_TYPES.AUTH_ERROR })
 		})
+}
+export const logout = (dispatch) => {
+	dispatch({ type: ACTION_TYPES.LOGOUT })
 }

@@ -49,7 +49,8 @@ export function authReducer(state, action) {
 				...state,
 				token: null,
 				user: null,
-				isAuthenticated: false
+				isAuthenticated: false,
+				error: 'Authentication error.'
 			}
 		default:
 			return state;

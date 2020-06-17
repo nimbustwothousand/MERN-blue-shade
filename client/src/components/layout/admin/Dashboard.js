@@ -2,9 +2,9 @@ import React from 'react'
 
 const Dashboard = () => {
 	return (
-		<div>
+		<main id="wrapper" className="page dashboard">
 			Admin dashboard component
-		</div>
+		</main>
 	)
 }
 
