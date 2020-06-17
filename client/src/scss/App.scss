@@ -75,6 +75,8 @@
 	height: 100%;
 	width: 200px;
 	position: fixed;
+	display: flex;
+	flex-direction: column;
 	z-index: 999;
 	top: 0;
 	left: 0;
@@ -86,7 +88,21 @@
 	& + main#wrapper {
 		height: 100%;
 		margin-left: 200px;
+		padding: 1rem;
 	}
+		&::-webkit-scrollbar {
+		width: .5rem;
+		&-track {
+			background-color: $dark-mid;
+		}
+		&-thumb {
+			background-color: darken($primary,10);
+			outline: 1px solid $primary;
+			&:hover {
+				background: $primary;
+			}
+		}
+}
 	&__title {
 		font-size: 1.5rem;
 		text-align: center;
@@ -96,8 +112,10 @@
 		margin-block-end: 1rem;
 		padding-inline-start: 0;
 		position: relative;
-
-		li {
+		&:nth-last-child(2) {
+			flex-grow: 1;
+		}
+		li:not(.admin-menu__title) {
 			padding: 0 .5rem;
 			cursor: pointer;
 			&:hover {
@@ -108,9 +126,10 @@
 			}
 		}
 		&.account-links {
-			position: absolute;
-			bottom: 0;
-			width: 100%;
+			border-top: 1px solid $white;
+			padding-top: .5rem;
+			margin-top: 3rem;
+			margin-bottom: 0;
 		}
 	}
 }
