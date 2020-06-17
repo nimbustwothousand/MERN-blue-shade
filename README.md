@@ -1,5 +1,5 @@
 # Blue Shade
-A full-stack ecommerce site based on a randomly-generated prompt from [http://goodbrief.io/](http://goodbrief.io/).
+A full-stack ecommerce site based on a randomly-generated prompt from [http://goodbrief.io/](http://goodbrief.io/). The goal of this project is to showcase a fullstack build using my most comfortable tech stack, for my portfolio. This project will have an admin backend with authentication and reauthentication, and will allow the user to add/edit/delete content from the website. 
 
 ## Technologies
 * Backend:
@@ -10,8 +10,9 @@ A full-stack ecommerce site based on a randomly-generated prompt from [http://go
 	* jsonwebtoken
 * Frontend:
 	* React.js & create-react-app
+	* react-router & react-router-dom
+	* React Context API and useReducer
 	* axios
-	* react-router
 
 ## The Brief
 ### Company Name:
