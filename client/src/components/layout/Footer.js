@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
-	if (window.location.pathname === '/admin') return null;
+	if (window.location.pathname.match(/^\/admin/g)) return null;
 	return (
 		<footer className="footer">
 			<div className="footer__navigation">

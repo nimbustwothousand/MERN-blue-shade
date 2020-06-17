@@ -1,8 +1,7 @@
 import React from 'react';
 import './App.min.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { AuthProvider } from './components/auth/Context';
-//import PrivateRoute from './components/auth/PrivateRoute';
+import { AuthProvider } from './auth/context';
 import Header from './components/layout/Header';
 import Landing from './components/layout/Landing';
 import Shop from './components/layout/Shop';
