@@ -6,7 +6,8 @@ const initialState = {
 	user: null,
 	token: localStorage.getItem('blue-shades-token'),
 	isAuthenticated: false,
-	error: null
+	error: null,
+	isLoading: true
 };
 export const AuthContext = createContext(initialState);
 

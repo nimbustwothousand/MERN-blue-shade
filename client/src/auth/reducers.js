@@ -3,7 +3,9 @@ export const ACTION_TYPES = {
 	LOGOUT: 'LOGOUT',
 	REGISTER: 'REGISTER',
 	REAUTH: 'REAUTH',
-	AUTH_ERROR: 'AUTH_ERROR'
+	AUTH_ERROR: 'AUTH_ERROR',
+	LOADING: 'LOADING',
+	NOT_LOADING: 'NOT_LOADING'
 }
 
 export function authReducer(state, action) {
@@ -25,7 +27,8 @@ export function authReducer(state, action) {
 				user: action.payload.user,
 				token: action.payload.token,
 				isAuthenticated: true,
-				error: null
+				error: null,
+				isLoading: false
 			}
 		case ACTION_TYPES.LOGOUT:
 			localStorage.removeItem('blue-shades-token');
@@ -33,7 +36,8 @@ export function authReducer(state, action) {
 				user: null,
 				token: null,
 				isAuthenticated: false,
-				error: null
+				error: null,
+				isLoading: false
 			};
 		case ACTION_TYPES.REGISTER:
 			return state;
@@ -42,7 +46,8 @@ export function authReducer(state, action) {
 				...state,
 				user: action.payload.user,
 				token: action.payload.token,
-				isAuthenticated: true
+				isAuthenticated: true,
+				isLoading: false
 			}
 		case ACTION_TYPES.AUTH_ERROR:
 			return {
@@ -50,8 +55,13 @@ export function authReducer(state, action) {
 				token: null,
 				user: null,
 				isAuthenticated: false,
-				error: 'Authentication error.'
+				error: 'Authentication error.',
+				isLoading: false
 			}
+		case ACTION_TYPES.NOT_LOADING:
+			return { ...state, isLoading: false }
+		case ACTION_TYPES.LOADING:
+			return { ...state, isLoading: true }
 		default:
 			return state;
 	}

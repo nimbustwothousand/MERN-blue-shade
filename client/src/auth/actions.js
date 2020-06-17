@@ -21,7 +21,10 @@ export const loadUser = (state, dispatch) => {
 			})).catch(err => {
 				dispatch({ type: ACTION_TYPES.AUTH_ERROR })
 			})
+	} else {
+		dispatch({ type: ACTION_TYPES.NOT_LOADING })
 	}
+	return { ...state, isLoading: false }
 }
 
 export const login = (componentState, dispatch) => {
