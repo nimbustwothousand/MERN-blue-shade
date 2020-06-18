@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Route, Redirect } from "react-router-dom";
 import { AuthContext } from "../../auth/context";
-import AdminHeader from '../layout/admin/AdminHeader';
+import AdminHeader from '../pages/admin/AdminHeader';
 
 const PrivateRoute = ({ component: RouteComponent, ...rest }) => {
 	const auth = useContext(AuthContext); // auth = { state, dispatch, ACTIONS }
