@@ -17,7 +17,10 @@ router.get('/', (req, res) => {
 // @access private
 router.post('/new', auth, (req, res) => {
 	const newShoes = new Shoe({
+		brand: req.body.brand,
+		category: req.body.category,
 		name: req.body.name,
+		description: req.body.description,
 		price: req.body.price,
 		color: req.body.color,
 		sizes: req.body.sizes

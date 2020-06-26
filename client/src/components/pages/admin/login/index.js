@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { Redirect, useRouteMatch } from 'react-router-dom';
-import { AuthContext } from '../../../auth/context';
+import { AuthContext } from '../../../../auth/context';
 
 const Login = () => {
 	const auth = useContext(AuthContext); // auth = { state, dispatch, ACTIONS }

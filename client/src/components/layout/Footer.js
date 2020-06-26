@@ -44,6 +44,9 @@ const Footer = () => {
 					<li>
 						<a href="https://www.instagram.com"><i className="fab fa-instagram"></i></a>
 					</li>
+					<li>
+						<a href="https://github.com/nimbustwothousand/MERN-blue-shade"><i className="fab fa-github"></i></a>
+					</li>
 				</ul>
 			</div>
 		</footer>

@@ -1,0 +1,35 @@
+https://www.json-generator.com/
+[
+  '{{repeat(30)}}',
+	{
+      brand: '{{random("Converse","Nike","Adidas","Vans","Crocs","DC","Ellesse","Etnies","Puma","Ugg","Under Armour","Birkenstock","Fly London","Tommy Hilfiger")}}',
+    category:'{{random("Gym Shoes","Skate Shoes","Sneakers","Trainers","Sandals","High Tops")}}',
+    name: '{{random("Fine Pollution","Smooth Industry","Needless Cell","Curious Intention","Next Health","Greasy Environment","Foreign Confusion","Anxious Steak","Pale Quantity","Ultra Poet","Powerful River","Raspy Resolution","Angry Death","Delirious Literature","Auspicious Depression","Fantastic Improvement","Shut Bedroom","Misty Patience","Nine Blood","Tall Negotiation","Eager Throat","Deep Queen","Hideous Assistance","Abortive Ad","Rightful Singer","Fresh Relationship","Brawny City","Faded Honey","Scattered Bonus","Sad Grandmother")}}',
+    description: '{{lorem()}}',
+    price: '{{integer(21,56)}}.99',
+    color: '{{random("#fff","#000","#2f4f4f","#F0F8FF","#DEB887","#5F9EA0","#7FFF00","#FFF8DC","#DC143C","#008B8B","#556B2F","#E9967A","#20B2AA","#dcdcdc","#F0FFF0","#ADD8E6","#FAF0E6","#663399","#708090","#D2B48C","#9ACD32")}}',
+      sizes: function (tags) {
+      var allSizes = [
+		"1",
+		"2",
+		"3",
+		"4",
+		"5",
+		"6",
+		"7",
+		"8",
+		"9",
+		"10",
+		"11",
+		"12",
+		"13"
+	];
+      var sizes = [];
+      allSizes.map(function (size) {
+        if (tags.bool()) {return sizes.push(size);
+		}
+	});
+      return sizes;
+}
+	}
+]

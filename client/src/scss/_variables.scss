@@ -6,3 +6,9 @@ $light-mid: #74e5ff;
 $light: #a6eeff;
 $black: #001013;
 $white: #f8fbfb;
+
+@mixin box-shadow {
+	-webkit-box-shadow: 5px 5px 8px 0px scale-color($black,$alpha:-50%);
+	-moz-box-shadow: 5px 5px 8px 0px scale-color($black,$alpha:-50%);
+	box-shadow: 5px 5px 8px 0px scale-color($black,$alpha:-50%);
+}

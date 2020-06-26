@@ -1,0 +1,502 @@
+[
+	{
+		"brand": "Birkenstock",
+		"category": "High Tops",
+		"name": "Sad Grandmother",
+		"description": "Quis magna adipisicing deserunt consectetur laboris aliqua magna in ullamco ipsum commodo id esse.",
+		"price": 51.99,
+		"color": "#FFF8DC",
+		"sizes": [
+			"1",
+			"2",
+			"5",
+			"6",
+			"7",
+			"9",
+			"10",
+			"11",
+			"12",
+			"13"
+		]
+	},
+	{
+		"brand": "Ellesse",
+		"category": "Gym Shoes",
+		"name": "Faded Honey",
+		"description": "Magna adipisicing sunt ea ullamco consequat elit laboris consectetur ad labore eu Lorem nulla laborum.",
+		"price": 43.99,
+		"color": "#dcdcdc",
+		"sizes": [
+			"1",
+			"5",
+			"10",
+			"12",
+			"13"
+		]
+	},
+	{
+		"brand": "Converse",
+		"category": "Sandals",
+		"name": "Next Health",
+		"description": "Ad est aute dolor incididunt ea ipsum dolor qui consectetur.",
+		"price": 33.99,
+		"color": "#DC143C",
+		"sizes": [
+			"2",
+			"4",
+			"5",
+			"10",
+			"11"
+		]
+	},
+	{
+		"brand": "Crocs",
+		"category": "High Tops",
+		"name": "Shut Bedroom",
+		"description": "Enim reprehenderit laborum nostrud qui laboris.",
+		"price": 48.99,
+		"color": "#556B2F",
+		"sizes": [
+			"1",
+			"3",
+			"5",
+			"7",
+			"8",
+			"9",
+			"11",
+			"13"
+		]
+	},
+	{
+		"brand": "Nike",
+		"category": "Gym Shoes",
+		"name": "Fantastic Improvement",
+		"description": "Ipsum eiusmod ex excepteur incididunt aute cupidatat enim amet pariatur Lorem id.",
+		"price": 55.99,
+		"color": "#DEB887",
+		"sizes": [
+			"2",
+			"4",
+			"7",
+			"8",
+			"9",
+			"11",
+			"12"
+		]
+	},
+	{
+		"brand": "Converse",
+		"category": "High Tops",
+		"name": "Eager Throat",
+		"description": "Non quis anim qui labore nisi fugiat ex laboris proident nisi eu.",
+		"price": 39.99,
+		"color": "#ADD8E6",
+		"sizes": [
+			"2",
+			"4",
+			"5",
+			"6",
+			"7",
+			"9",
+			"10",
+			"11"
+		]
+	},
+	{
+		"brand": "DC",
+		"category": "Gym Shoes",
+		"name": "Sad Grandmother",
+		"description": "Culpa eu culpa irure reprehenderit ea culpa culpa amet ipsum velit aute in.",
+		"price": 33.99,
+		"color": "#DC143C",
+		"sizes": [
+			"1",
+			"3",
+			"11",
+			"12"
+		]
+	},
+	{
+		"brand": "Vans",
+		"category": "Gym Shoes",
+		"name": "Delirious Literature",
+		"description": "Veniam sint Lorem reprehenderit velit velit duis.",
+		"price": 26.99,
+		"color": "#663399",
+		"sizes": [
+			"1",
+			"3",
+			"7",
+			"8",
+			"9"
+		]
+	},
+	{
+		"brand": "Nike",
+		"category": "Gym Shoes",
+		"name": "Auspicious Depression",
+		"description": "Ipsum deserunt occaecat labore pariatur voluptate sunt non sit enim anim labore velit aliqua consectetur.",
+		"price": 26.99,
+		"color": "#556B2F",
+		"sizes": [
+			"2",
+			"9",
+			"12"
+		]
+	},
+	{
+		"brand": "Vans",
+		"category": "Trainers",
+		"name": "Scattered Bonus",
+		"description": "Incididunt magna qui nisi deserunt cillum magna irure in culpa excepteur aliqua dolore nostrud cupidatat.",
+		"price": 28.99,
+		"color": "#20B2AA",
+		"sizes": [
+			"1",
+			"2",
+			"5",
+			"6",
+			"8"
+		]
+	},
+	{
+		"brand": "Nike",
+		"category": "Gym Shoes",
+		"name": "Sad Grandmother",
+		"description": "Pariatur et id cupidatat tempor magna irure et.",
+		"price": 47.99,
+		"color": "#F0F8FF",
+		"sizes": [
+			"4",
+			"5",
+			"6",
+			"7",
+			"8",
+			"9",
+			"10",
+			"11"
+		]
+	},
+	{
+		"brand": "Crocs",
+		"category": "Sneakers",
+		"name": "Eager Throat",
+		"description": "Deserunt mollit cupidatat exercitation enim ea veniam.",
+		"price": 24.99,
+		"color": "#dcdcdc",
+		"sizes": [
+			"2",
+			"3",
+			"4",
+			"5",
+			"7",
+			"9",
+			"10",
+			"11",
+			"12",
+			"13"
+		]
+	},
+	{
+		"brand": "Puma",
+		"category": "Skate Shoes",
+		"name": "Misty Patience",
+		"description": "Do sunt labore voluptate sint magna elit dolore mollit eiusmod adipisicing quis aliquip anim deserunt.",
+		"price": 31.99,
+		"color": "#7FFF00",
+		"sizes": [
+			"1",
+			"2",
+			"4",
+			"6",
+			"7",
+			"8",
+			"9",
+			"10",
+			"11",
+			"12"
+		]
+	},
+	{
+		"brand": "Tommy Hilfiger",
+		"category": "Gym Shoes",
+		"name": "Delirious Literature",
+		"description": "Aliquip minim voluptate nostrud laboris Lorem anim exercitation eiusmod labore.",
+		"price": 23.99,
+		"color": "#663399",
+		"sizes": [
+			"1",
+			"4",
+			"6",
+			"10",
+			"11",
+			"12",
+			"13"
+		]
+	},
+	{
+		"brand": "Birkenstock",
+		"category": "Sneakers",
+		"name": "Auspicious Depression",
+		"description": "Officia exercitation pariatur esse laborum ad veniam aliqua.",
+		"price": 25.99,
+		"color": "#7FFF00",
+		"sizes": [
+			"2",
+			"4",
+			"10",
+			"11",
+			"13"
+		]
+	},
+	{
+		"brand": "Etnies",
+		"category": "Skate Shoes",
+		"name": "Powerful River",
+		"description": "Eiusmod veniam anim duis magna cupidatat quis excepteur Lorem consectetur excepteur sit exercitation labore irure.",
+		"price": 47.99,
+		"color": "#D2B48C",
+		"sizes": [
+			"1",
+			"2",
+			"4",
+			"8",
+			"9",
+			"10",
+			"13"
+		]
+	},
+	{
+		"brand": "DC",
+		"category": "Sneakers",
+		"name": "Tall Negotiation",
+		"description": "Enim amet minim enim quis laborum dolore magna quis magna labore consequat.",
+		"price": 27.99,
+		"color": "#D2B48C",
+		"sizes": [
+			"1",
+			"7",
+			"9",
+			"11"
+		]
+	},
+	{
+		"brand": "Vans",
+		"category": "Skate Shoes",
+		"name": "Scattered Bonus",
+		"description": "Mollit eu elit Lorem fugiat enim incididunt enim enim amet esse.",
+		"price": 27.99,
+		"color": "#9ACD32",
+		"sizes": [
+			"1",
+			"2",
+			"4",
+			"5",
+			"8",
+			"10",
+			"11"
+		]
+	},
+	{
+		"brand": "Nike",
+		"category": "Sneakers",
+		"name": "Nine Blood",
+		"description": "Magna deserunt ipsum enim adipisicing adipisicing tempor pariatur anim proident sunt dolore proident nulla.",
+		"price": 32.99,
+		"color": "#D2B48C",
+		"sizes": [
+			"3",
+			"5",
+			"6",
+			"7",
+			"9",
+			"10",
+			"13"
+		]
+	},
+	{
+		"brand": "Ugg",
+		"category": "Trainers",
+		"name": "Fresh Relationship",
+		"description": "Aute duis laborum eu velit ullamco labore ex qui.",
+		"price": 36.99,
+		"color": "#9ACD32",
+		"sizes": [
+			"5",
+			"7",
+			"9",
+			"10",
+			"12",
+			"13"
+		]
+	},
+	{
+		"brand": "Tommy Hilfiger",
+		"category": "Sandals",
+		"name": "Delirious Literature",
+		"description": "Do in deserunt esse eiusmod qui.",
+		"price": 25.99,
+		"color": "#dcdcdc",
+		"sizes": [
+			"1",
+			"5",
+			"7",
+			"8",
+			"9",
+			"10",
+			"11",
+			"12",
+			"13"
+		]
+	},
+	{
+		"brand": "DC",
+		"category": "Sandals",
+		"name": "Needless Cell",
+		"description": "Commodo officia occaecat non irure et tempor sit mollit occaecat est do nostrud consectetur Lorem.",
+		"price": 35.99,
+		"color": "#F0FFF0",
+		"sizes": [
+			"8",
+			"10"
+		]
+	},
+	{
+		"brand": "Under Armour",
+		"category": "Gym Shoes",
+		"name": "Eager Throat",
+		"description": "Eu consequat deserunt incididunt proident ipsum qui ea sint culpa quis ex excepteur minim nulla.",
+		"price": 35.99,
+		"color": "#5F9EA0",
+		"sizes": [
+			"2",
+			"3",
+			"5",
+			"6",
+			"7",
+			"8",
+			"9"
+		]
+	},
+	{
+		"brand": "Ugg",
+		"category": "Skate Shoes",
+		"name": "Greasy Environment",
+		"description": "Minim sit sint consectetur non do consequat.",
+		"price": 54.99,
+		"color": "#DEB887",
+		"sizes": [
+			"1",
+			"5",
+			"6",
+			"9",
+			"12",
+			"13"
+		]
+	},
+	{
+		"brand": "Under Armour",
+		"category": "Sneakers",
+		"name": "Deep Queen",
+		"description": "Exercitation do consectetur proident enim ex consequat.",
+		"price": 25.99,
+		"color": "#F0FFF0",
+		"sizes": [
+			"1",
+			"4",
+			"5",
+			"6",
+			"9",
+			"10",
+			"11"
+		]
+	},
+	{
+		"brand": "DC",
+		"category": "Skate Shoes",
+		"name": "Hideous Assistance",
+		"description": "Aliquip exercitation do cillum minim eu veniam esse aliqua ex quis elit mollit anim occaecat.",
+		"price": 52.99,
+		"color": "#D2B48C",
+		"sizes": [
+			"2",
+			"3",
+			"5",
+			"8",
+			"9",
+			"10",
+			"11"
+		]
+	},
+	{
+		"brand": "Puma",
+		"category": "Gym Shoes",
+		"name": "Eager Throat",
+		"description": "Ullamco aliqua aliqua eiusmod incididunt eu pariatur nostrud proident dolore officia.",
+		"price": 53.99,
+		"color": "#ADD8E6",
+		"sizes": [
+			"1",
+			"2",
+			"3",
+			"6",
+			"8",
+			"9",
+			"10"
+		]
+	},
+	{
+		"brand": "DC",
+		"category": "Sandals",
+		"name": "Powerful River",
+		"description": "Id ut ea pariatur eiusmod velit labore consequat qui exercitation nostrud enim.",
+		"price": 31.99,
+		"color": "#556B2F",
+		"sizes": [
+			"3",
+			"4",
+			"7",
+			"8",
+			"9",
+			"11"
+		]
+	},
+	{
+		"brand": "Etnies",
+		"category": "Gym Shoes",
+		"name": "Sad Grandmother",
+		"description": "Enim aute nisi dolor labore dolore.",
+		"price": 36.99,
+		"color": "#E9967A",
+		"sizes": [
+			"1",
+			"2",
+			"3",
+			"4",
+			"6",
+			"7",
+			"9",
+			"10",
+			"12"
+		]
+	},
+	{
+		"brand": "Under Armour",
+		"category": "High Tops",
+		"name": "Sad Grandmother",
+		"description": "Nisi magna consequat proident aliquip.",
+		"price": 28.99,
+		"color": "#7FFF00",
+		"sizes": [
+			"1",
+			"2",
+			"5",
+			"6",
+			"7",
+			"8",
+			"10",
+			"11",
+			"12"
+		]
+	}
+]

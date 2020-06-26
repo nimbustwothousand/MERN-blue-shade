@@ -90,13 +90,12 @@ router.post('/auth', (req, res) => {
 // @desc get user data
 // @access private
 router.get('/user', auth, (req, res) => {
-	//if (req.user) {
 	User.findById(req.user.id)
 		.select('-password')
 		.then(user => {
 			res.json(user)
 		})
-	//}
+	// returns status 400 Bad Request if token is out of date
 });
 
 module.exports = router

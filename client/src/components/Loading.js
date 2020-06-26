@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Loading = () => {
+const Loading = ({ msg = "Preparing Blue Shades..." }) => {
 	return (
 		<main id="wrapper" className="page loading">
 			<div>
@@ -10,7 +10,7 @@ const Loading = () => {
 					<div className="bounce3"></div>
 				</div>
 				<p className="loading__text">
-					Preparing Blue Shades...
+					{msg}
 				</p>
 			</div>
 		</main>
