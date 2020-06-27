@@ -1,11 +1,37 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import axios from '../../../../utils/axios';
+import Loading from '../../../Loading';
+import Post from './Post';
 
 const Blog = () => {
-	return (
-		<main id="wrapper" className="page blog">
-			Blog component
-		</main>
-	)
+	const [state, setState] = useState({
+		loading: true,
+		posts: []
+	});
+	useEffect(() => {
+		axios.get('/api/posts').then(res => {
+			setState(state => ({
+				...state,
+				loading: false,
+				posts: res.data
+			}));
+
+		})
+	}, [])
+	if (state.loading) {
+		return (<Loading />)
+	} else {
+		return (
+			<main id="wrapper" className="page blog">
+				Blog component
+				<section id="post-grid">
+					{
+						state.posts.map(post => <Post key={post._id} post={post} />)
+					}
+				</section>
+			</main>
+		)
+	}
 }
 
 export default Blog

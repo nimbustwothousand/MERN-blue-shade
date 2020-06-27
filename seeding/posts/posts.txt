@@ -1,0 +1,14 @@
+https://www.json-generator.com/
+[
+  '{{repeat(30)}}',
+	{
+      title: '{{lorem(integer(2,6),"words")}}',
+      excerpt: '{{lorem(5, "words")}}',
+      body: '{{lorem(5,"paragraphs")}}',
+      slug: function(tags) {
+        return encodeURI(this.title)+"-"+this._id;
+      },
+      createdAt: "2020-06-27T14:47:15.743+00:00",
+      updatedAt: "2020-06-27T14:47:15.743+00:00"
+    }
+]

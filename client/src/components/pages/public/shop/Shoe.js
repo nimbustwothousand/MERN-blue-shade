@@ -3,22 +3,6 @@ import ShoeColor from './ShoeColor';
 import ShoeThumbnail from './ShoeThumbnail';
 
 const Shoe = ({ shoe }) => {
-	/*
-	{
-		"sizes": [
-				"2",
-				"7",
-				"8"
-		],
-		"_id": "5eec0e74f45e8245d157668f",
-		"brand": "Ugg",
-		"category": "Sandals",
-		"name": "Misty Patience",
-		"description": "Lorem reprehenderit aliqua minim velit ullamco excepteur consectetur.",
-		"price": 56.99,
-		"color": "#2e5f68"
-	}
-*/
 	return (
 		<div className="shoe-container">
 			<div className="shoe-container__image">
