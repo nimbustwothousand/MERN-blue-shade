@@ -1,0 +1,23 @@
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin box-shadow {
+	-webkit-box-shadow: 5px 5px 8px 0px scale-color($black,$alpha:-50%);
+	-moz-box-shadow: 5px 5px 8px 0px scale-color($black,$alpha:-50%);
+	box-shadow: 5px 5px 8px 0px scale-color($black,$alpha:-50%);
+}
+
+@mixin box-shadow-soft {
+	-webkit-box-shadow: 5px 5px 8px 0px scale-color($black,$alpha:-80%);
+	-moz-box-shadow: 5px 5px 8px 0px scale-color($black,$alpha:-80%);
+	box-shadow: 5px 5px 8px 0px scale-color($black,$alpha:-80%);
+}

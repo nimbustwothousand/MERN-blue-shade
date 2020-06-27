@@ -10,11 +10,11 @@ const Shop = () => {
 	});
 	useEffect(() => {
 		axios.get('/api/shoes').then(res => {
-			setState({
+			setState(state => ({
 				...state,
 				loading: false,
 				shoes: res.data
-			});
+			}));
 
 		})
 	}, [])

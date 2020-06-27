@@ -1,31 +1,52 @@
 import React from 'react';
-// https://dribbble.com/shots/6385530-CONTACT-PAGE
+
 const Contact = () => {
 	return (
 		<main id="wrapper" className="page contact">
 			<h1>Contact Us</h1>
-			<div className="row">
+			<div className="contact__get-in-touch row">
 				<div className="col-6 contact__blurb">
 					<h2>Get in Touch</h2>
-					<div className="contact__blurb">
+					<div>
 						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo iste sapiente labore, similique reiciendis sed sequi corporis mollitia aperiam libero fugit laborum, adipisci veniam, sunt esse. Ullam velit quidem magnam!</p>
 					</div>
 					<div className="contact__info">
 						<ul>
-							<li><i className="fas fa-envelope"></i>email</li>
-							<li><i className="fas fa-phone"></i>telephone</li>
-							<li><i className="fab fa-twitter"></i>twitter</li>
+							<li><i className="fas fa-envelope"></i>hello@blueshade.co.uk</li>
+							<li><i className="fas fa-phone"></i>+44 (0) 1234 567 890</li>
+							<li><i className="fab fa-twitter"></i>@blueshadeshoes</li>
 						</ul>
 					</div>
 				</div>
 				<div className="col-6">
 					<div className="contact__form">
-						contact form
+						<form onSubmit={(e) => e.preventDefault()}>
+							<div className="form__input">
+								<label htmlFor="name">Name</label>
+								<input name="name" type="text" placeholder="John Doe" aria-placeholder="John Doe" />
+							</div>
+							<div className="form__input">
+								<label htmlFor="email">Email address</label>
+								<input name="email" type="text" placeholder="john.doe@email.co.uk" />
+							</div>
+							<div className="form__input">
+								<label htmlFor="message">Your message</label>
+								<textarea name="message" />
+							</div>
+							<div>
+								<button className="btn btn-primary">Send</button>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
 			<div className="contact__support">
 				<h2>Contact Support</h2>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente cupiditate sequi, deleniti quaerat, placeat similique repudiandae sunt fuga nihil sit, neque tempore veniam consequatur facere rem sint ex magnam impedit.</p>
+				<div>
+					<div className="btn btn-dark-mid">Customer Support</div>
+					<div className="btn btn-dark-mid">Technical Support</div>
+				</div>
 			</div>
 			<div className="contact__map">
 				<h2>Where To Find Us</h2>

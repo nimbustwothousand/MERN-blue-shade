@@ -1,65 +1,21 @@
-body {
-	font-family: 'Scada', sans-serif;
-	font-weight: 400;
-	color: $black;
-	background-color: $white;
-	
-	#root, .App {
-		min-height: 100vh;
+.row {
+	display: flex;
+	flex-direction: column;
+	@include desktop {
+		flex-direction: row;
 	}
 }
-#wrapper {
-	min-height: calc(100vh - 64px);
-	max-width: 1366px;
-	margin: 0 auto;
-}
-ul {list-style: none;}
-h1 {
-	font-weight: 900;
-	font-style: italic;
-	font-size: 2.5rem;
-	margin-bottom: 1rem;
-}
-h2 {
-	font-weight: 800;
-	font-style: italic;
-	font-size: 2.25rem;
-	margin-bottom: .75rem;
-}
-h3 {
-	font-weight: 700;
-	font-size: 2rem;
-	margin-bottom: .75rem;
-}
-h4 {
-	font-weight: 600;
-	font-size: 1.75rem;
-	margin-bottom: .75rem;
-}
-h5 {
-	font-weight: 400;
-	font-size: 1.5rem;
-	margin-bottom: .75rem;
-}
-h6 {
-	font-weight: 400;
-	font-size: 1.25rem;
-	margin-bottom: .75rem;
-}
-a {
-	color: $dark-mid;
-	text-decoration: none;
-	&:hover{
-		color: $dark;
-		text-decoration: underline;
-	}
-}
-.row {display: flex;}
+
 $nums: 1,2,3,4,5,6,7,8,9,10,11,12;
 @each $num in $nums {
 	.col-#{$num} {
-		width: percentage($num / 12);
-		> * {width:95%;}
+		width: 100%;
+		@include desktop {
+			width: percentage($num / 12);
+			> * {
+				width: 95%;
+			}
+		}
 	}
 }
 .container {
@@ -67,5 +23,23 @@ $nums: 1,2,3,4,5,6,7,8,9,10,11,12;
 	padding-left: 1rem;
 	padding-right: 1rem;
 }
+
 i {margin-right: 1rem;}
+
+.btn {
+	outline: 0;
+	border: 0;
+	padding: .5rem;
+	border-radius: 5px;
+	cursor: pointer;
+	&:hover {
+		font-weight: bold;
+	}
+	@each $clr, $clrval in $colors {
+		&-#{$clr} {
+			background-color: $clrval;
+			color: text-color($clrval)
+		}
+	}
+}
 

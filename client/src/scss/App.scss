@@ -1,284 +1,95 @@
 @import url('https://fonts.googleapis.com/css2?family=Scada:wght@400;700&display=swap');
 @import 'variables';
+@import 'mixins';
 @import 'reset';
 @import 'utilities';
+@import 'layout';
+@import 'contact';
+@import 'shop';
+@import 'admin';
 
-.header {
-	padding: .5rem;
-	background-color: $light;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	-webkit-box-shadow: 0px 5px 20px 0px rgba(0,16,19,0.48);
-	-moz-box-shadow: 0px 5px 20px 0px rgba(0,16,19,0.48);
-	box-shadow: 0px 5px 20px 0px rgba(0,16,19,0.48);
-	margin-bottom: 1.5rem;
 
-	&__navigation {
-		float: right;
-		text-align: right;
-		margin-top: auto;
-		margin-bottom: auto;
-
-		ul {
-			display: flex;
-			li {
-				margin: auto .5rem;
-				font-size: 1.5rem;
-				a {
-					color: $black;
-				}
-			}
-		}
+body {
+	font-family: 'Scada', sans-serif;
+	font-weight: 400;
+	color: $black;
+	background-color: $white;
+	background: linear-gradient(0deg, rgba(0,84,103,1) 0%, rgba(0,84,103,1) 120px, rgba(255,255,255,1) 120px, rgba(255,255,255,1) 500px, rgba(166,238,255,1) 100%);
+	
+	#root, .App {
+		min-height: 100vh;
 	}
 }
-.footer {
-	margin-top: 3rem;
-	padding: .5rem;
-	background-color: $dark;
-	color: $white;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	a {
-		color: $white;
-		&:hover {
-			color: $light;
-			text-decoration: none;
-		}
+#wrapper {
+	min-height: calc(100vh - 64px);
+	max-width: 1080px;
+	margin: 0 auto;
+}
+@media all and (max-width:1080px) {
+	#wrapper {
+		padding-left: 1rem;
+		padding-right:1rem;
 	}
-	ul {
+}
+ul {list-style: none;}
+h1 {
+	font-weight: 900;
+	font-style: italic;
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+}
+h2 {
+	font-weight: 800;
+	font-style: italic;
+	font-size: 2.25rem;
+	margin-bottom: .75rem;
+}
+h3 {
+	font-weight: 700;
+	font-size: 2rem;
+	margin-bottom: .75rem;
+}
+h4 {
+	font-weight: 600;
+	font-size: 1.75rem;
+	margin-bottom: .75rem;
+}
+h5 {
+	font-weight: 400;
+	font-size: 1.5rem;
+	margin-bottom: .75rem;
+}
+h6 {
+	font-weight: 400;
+	font-size: 1.25rem;
+	margin-bottom: .75rem;
+}
+a {
+	color: $dark-mid;
+	text-decoration: none;
+	&:hover{
+		color: $dark;
+		text-decoration: underline;
+	}
+}
+form {
+	.form__input {
 		display: flex;
-	}
-	&__social {
-		font-size: 2rem;
-		ul {
-			li {
-				padding: .5rem;
-				width: 100%;
-			}
+		flex-direction: column;
+		input, textarea {
+			padding: .2rem;
+			border-radius: 5px;
+			border: none;
+			margin: .5rem;
+		}
+		textarea {
+			height: 150px;
+		}
+		label {
+			margin-bottom: -.5rem;
 		}
 	}
-	&__navigation {
-		margin-top: auto;
-		margin-bottom: auto;
-		ul {
-			li {
-				margin-right: 3rem;
-				i {
-					margin-right: .5rem;
-				}
-			}
-		}
-	}
-}
-.admin-menu {
-	height: 100%;
-	width: 200px;
-	position: fixed;
-	display: flex;
-	flex-direction: column;
-	z-index: 999;
-	top: 0;
-	left: 0;
-	overflow-x: hidden;
-	overflow-y: scroll;
-	padding: .5rem 0;
-	background-color: $dark;
-	color: $white;
-	& + main#wrapper {
-		height: 100%;
-		margin-left: 200px;
-		padding: 1rem;
-	}
-		&::-webkit-scrollbar {
-		width: .5rem;
-		&-track {
-			background-color: $dark-mid;
-		}
-		&-thumb {
-			background-color: darken($primary,10);
-			outline: 1px solid $primary;
-			&:hover {
-				background: $primary;
-			}
-		}
-}
-	&__title {
-		font-size: 1.5rem;
-		text-align: center;
-	}
-	ul.admin-menu__links {
-		margin-block-start: 1rem;
-		margin-block-end: 1rem;
-		padding-inline-start: 0;
-		position: relative;
-		&:nth-last-child(2) {
-			flex-grow: 1;
-		}
-		li:not(.admin-menu__title) {
-			padding: 0 .5rem;
-			cursor: pointer;
-			&:hover {
-				background-color: $dark-mid;
-			}
-			a {
-				color: $white;
-			}
-		}
-		&.account-links {
-			border-top: 1px solid $white;
-			padding-top: .5rem;
-			margin-top: 3rem;
-			margin-bottom: 0;
-		}
-	}
-}
-.contact {
-	&__blurb {}
-	&__info {}
-	&__form{}
-	&__support{}
-	&__map{
-		iframe {
-			width:100%;
-			min-height:400px;
-		}
-	}
-}
-.admin {
-	position: relative;
-	height: 100%;
-	&__container {
-		position: absolute;
-    top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		padding: 2rem;
-		width: 22rem;
-		max-width: 100%;
-		background: $dark;
-		color: $white;
-		border-radius: 5%;
-		h1 {
-			text-align: center;
-		}
-		.input-container {
-			width: 100%;
-			margin: 1rem 0;
-			* {
-				width: 100%;
-			}
-		}
-		.button-container {
-			width: 100%;
-			margin: 1rem 0;
 			button {
 				width: 100%;
-				cursor: pointer;
 			}
-		}
-	}
-}
-.loading {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	&__text {
-		width: 100%;
-		margin-top: 3rem;
-		text-align: center;
-	}
-	.spinner {
-		margin: auto;
-		width: 70px;
-		text-align: center;
-		& > div {
-			width: 18px;
-			height: 18px;
-			background-color: $primary;
-
-			border-radius: 100%;
-			display: inline-block;
-			-webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-			animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-		}
-		.bounce1 {
-			-webkit-animation-delay: -0.32s;
-			animation-delay: -0.32s;
-		}
-	
-		.bounce2 {
-			-webkit-animation-delay: -0.16s;
-			animation-delay: -0.16s;
-		}
-	}
-
-	@-webkit-keyframes sk-bouncedelay {
-		0%, 80%, 100% { -webkit-transform: scale(0) }
-		40% { -webkit-transform: scale(1.0) }
-	}
-
-	@keyframes sk-bouncedelay {
-		0%, 80%, 100% { 
-			-webkit-transform: scale(0);
-			transform: scale(0);
-		} 40% { 
-			-webkit-transform: scale(1.0);
-			transform: scale(1.0);
-		}
-	}
-}
-.shop {
-	#shoe-grid {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-		column-gap: 1rem;
-		row-gap: 1rem;
-		.shoe-container {
-			background-color: $light;
-			padding: 1rem;
-			border-radius: 10px;
-			@include box-shadow;
-			&__image{
-				background-color: $primary;
-				margin-bottom: 1rem;
-			}
-			&__info {	
-			.shoe {
-				&__label {
-					display: flex;
-					& > * {
-						margin-top: auto;
-						margin-bottom: auto;
-					}
-				}
-				&__brand {
-					font-size: 1.6rem;
-					line-height: 1.6rem;
-					font-weight: bold;
-					margin-right: .4rem;
-				}
-				&__name{
-					font-size: 1.2rem;
-					margin-right: .4rem;
-					line-height: 1.6rem;
-				}
-				&__color{
-					margin-left: auto;
-					height: 18px;
-					width: 18px;
-					border-radius: 100%;
-					border: 2px solid $white;
-				}
-				&__description {
-					font-size: .8rem;
-				}
-				&__price{
-					font-size: 1.3rem;
-				}
-			}
-			}
-		}
-	}
 }

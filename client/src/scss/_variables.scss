@@ -7,8 +7,16 @@ $light: #a6eeff;
 $black: #001013;
 $white: #f8fbfb;
 
-@mixin box-shadow {
-	-webkit-box-shadow: 5px 5px 8px 0px scale-color($black,$alpha:-50%);
-	-moz-box-shadow: 5px 5px 8px 0px scale-color($black,$alpha:-50%);
-	box-shadow: 5px 5px 8px 0px scale-color($black,$alpha:-50%);
+$colors: (primary:$primary,dark-mid:$dark-mid,dark:$dark,light-mid:$light-mid,light:$light,black:$black,white:$white);
+
+// BREAKPOINTS -----
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@function text-color($color) {
+  @if (lightness($color) > 50) {
+    @return $black;
+  } @else {
+    @return $white;
+  }
 }
