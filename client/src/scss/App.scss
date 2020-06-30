@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Scada:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap');
 @import 'variables';
 @import 'mixins';
 @import 'reset';
@@ -10,7 +10,7 @@
 
 
 body {
-	font-family: 'Scada', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 	color: $black;
 	background-color: $white;
@@ -32,6 +32,7 @@ body {
 	}
 }
 ul {list-style: none;}
+h1, h2, h3, h4, h5, h6 {font-family: 'Roboto Slab', serif;}
 h1 {
 	font-weight: 900;
 	font-style: italic;
