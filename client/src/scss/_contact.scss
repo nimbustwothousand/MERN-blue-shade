@@ -5,13 +5,11 @@
 	&__form {
 		margin: auto;
 		padding: 0;
-		min-width: unset;
-		width: 100%;
+		max-width: 100%;
+		width: 500px;
 
 		@include desktop {
 			padding-top:4.125rem;
-			width: 50%;
-			min-width: 300px;
 			margin-left: auto;
 		}
 	}

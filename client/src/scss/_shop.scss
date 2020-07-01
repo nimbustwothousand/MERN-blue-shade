@@ -11,7 +11,7 @@
 		column-gap: 1rem;
 		row-gap: 1rem;
 		.shoe-container {
-			background-color: $light;
+			background-color: transparentize($color: $white, $amount: 0.5);
 			padding: 1rem;
 			border-radius: 10px;
 			@include box-shadow;
