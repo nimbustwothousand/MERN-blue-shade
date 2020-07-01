@@ -13,7 +13,9 @@ const PrivateRoute = ({ component: RouteComponent, ...rest }) => {
 				!!user ? (
 					<>
 						<AdminHeader />
-						<RouteComponent {...routeProps} />
+						<main id="admin-wrapper">
+							<RouteComponent {...routeProps} />
+						</main>
 					</>
 				) : (
 						<Redirect to={"/admin"} />

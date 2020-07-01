@@ -3,7 +3,6 @@ import './App.min.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { AuthContext } from './auth/context';
 import Loading from './components/Loading';
-import Header from './components/layout/Header';
 import Landing from './components/pages/public/landing';
 import Shop from './components/pages/public/shop';
 import Blog from './components/pages/public/blog';
@@ -12,6 +11,7 @@ import Footer from './components/layout/Footer';
 import Dashboard from './components/pages/admin/dashboard';
 import Login from './components/pages/admin/login';
 import PrivateRoute from './components/auth/PrivateRoute';
+import PublicRoute from './components/auth/PublicRoute';
 import ROUTES from './utils/routes';
 
 function App() {
@@ -20,25 +20,11 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path={ROUTES.root}>
-          <Header />
-          <Landing />
-        </Route>
-        <Route exact path={ROUTES.shop.root}>
-          <Header />
-          <Shop />
-        </Route>
-        <Route exact path={ROUTES.blog.root}>
-          <Header />
-          <Blog />
-        </Route>
-        <Route exact path={ROUTES.contact.root}>
-          <Header />
-          <Contact />
-        </Route>
-        <Route exact path={ROUTES.admin.root}>
-          <Login />
-        </Route>
+        <PublicRoute exact path={ROUTES.root} component={Landing} />
+        <PublicRoute exact path={ROUTES.shop.root} component={Shop} />
+        <PublicRoute exact path={ROUTES.blog.root} component={Blog} />
+        <PublicRoute exact path={ROUTES.contact.root} component={Contact} />
+        <Route exact path={ROUTES.admin.root} component={Login} />
         <PrivateRoute exact path={ROUTES.admin.dashboard} component={Dashboard} />
       </Switch>
       <Footer />

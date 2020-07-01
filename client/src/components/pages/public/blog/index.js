@@ -22,14 +22,14 @@ const Blog = () => {
 		return (<Loading />)
 	} else {
 		return (
-			<main id="wrapper" className="page blog">
+			<div className="page blog">
 				Blog component
 				<section id="post-grid">
 					{
 						state.posts.map(post => <Post key={post._id} post={post} />)
 					}
 				</section>
-			</main>
+			</div>
 		)
 	}
 }

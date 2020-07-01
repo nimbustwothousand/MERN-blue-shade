@@ -19,17 +19,17 @@ const Shop = () => {
 		})
 	}, [])
 	if (state.loading) {
-		return (<Loading />)
+		return (<Loading msg="Loading..." />)
 	} else {
 		return (
-			<main id="wrapper" className="page shop">
+			<div className="page shop">
 				Shop component
 				<section id="shoe-grid">
 					{
 						state.shoes.map(shoe => <Shoe key={shoe._id} shoe={shoe} />)
 					}
 				</section>
-			</main>
+			</div>
 		)
 	}
 }
