@@ -3,17 +3,11 @@ import './App.min.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 import { AuthContext } from './auth/context';
-import PrivateRoute from './components/auth/PrivateRoute';
-import PublicRoute from './components/auth/PublicRoute';
+import { PrivateRoute, PublicRoute } from './components/auth';
 import ROUTES from './utils/routes';
 import Loading from './components/Loading';
-import Landing from './components/pages/public/landing';
-import Shop from './components/pages/public/shop';
-import Blog from './components/pages/public/blog';
-import Contact from './components/pages/public/contact';
-import Footer from './components/layout/Footer';
-import Dashboard from './components/pages/admin/dashboard';
-import Login from './components/pages/admin/login';
+import { Landing, Shop, Blog, Contact } from './components/pages';
+import { Login, Dashboard } from './components/pages'
 
 function App() {
   const auth = useContext(AuthContext); // auth = { state, dispatch, ACTIONS }
@@ -29,7 +23,6 @@ function App() {
         <Route exact path={ROUTES.admin.root} component={Login} />
         <PrivateRoute exact path={ROUTES.admin.dashboard} component={Dashboard} />
       </Switch>
-      <Footer />
     </Router>
   );
 }

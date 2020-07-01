@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import ROUTES from '../../utils/routes';
 import Logo from '../../media/logo83x192.png';
 
 const Header = () => {
@@ -25,16 +26,16 @@ const Header = () => {
 					<div role="button" onClick={toggleMenu} id="close-menu">&times;</div>
 					<ul className="nav">
 						<li className="nav-item">
-							<Link onClick={hideMenu} to="/">Home</Link>
+							<Link onClick={hideMenu} to={ROUTES.root}>Home</Link>
 						</li>
 						<li className="nav-item">
-							<Link onClick={hideMenu} to="/shop">Shop</Link>
+							<Link onClick={hideMenu} to={ROUTES.shop.root}>Shop</Link>
 						</li>
 						<li className="nav-item">
-							<Link onClick={hideMenu} to="/blog">Blog</Link>
+							<Link onClick={hideMenu} to={ROUTES.blog.root}>Blog</Link>
 						</li>
 						<li className="nav-item">
-							<Link onClick={hideMenu} to="/contact">Contact</Link>
+							<Link onClick={hideMenu} to={ROUTES.contact.root}>Contact</Link>
 						</li>
 					</ul>
 				</nav>

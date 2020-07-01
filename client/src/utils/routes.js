@@ -10,8 +10,8 @@ const ROUTES = {
 		root: '/contact'
 	},
 	admin: {
-		root: '/admin',
-		dashboard: '/admin/dashboard'
+		root: '/bs-admin',
+		dashboard: '/bs-admin/dashboard'
 	},
 }
 export default ROUTES

@@ -1,6 +1,6 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import Header from "../layout/Header";
+import { Header, Footer } from "../layout";
 import { Helmet } from "react-helmet";
 
 const PublicRoute = ({ component: RouteComponent, ...rest }) => {
@@ -17,6 +17,7 @@ const PublicRoute = ({ component: RouteComponent, ...rest }) => {
 						<main id="wrapper">
 							<RouteComponent {...routeProps} />
 						</main>
+						<Footer />
 					</>
 				)
 			}
