@@ -13,6 +13,7 @@ A full-stack ecommerce site based on a randomly-generated prompt from [http://go
 	* react-router & react-router-dom
 	* React Context API and useReducer
 	* axios
+	* react-helmet
 
 ## The Brief
 ### Company Name:

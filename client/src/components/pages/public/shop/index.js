@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from "react-helmet";
 import axios from '../../../../utils/axios';
 import Loading from '../../../Loading';
 import Shoe from './Shoe';
@@ -22,14 +23,19 @@ const Shop = () => {
 		return (<Loading msg="Loading..." />)
 	} else {
 		return (
-			<div className="page shop">
-				Shop component
+			<>
+				<Helmet>
+					<title>Shop</title>
+				</Helmet>
+				<div className="shop">
+					Shop component
 				<section id="shoe-grid">
-					{
-						state.shoes.map(shoe => <Shoe key={shoe._id} shoe={shoe} />)
-					}
-				</section>
-			</div>
+						{
+							state.shoes.map(shoe => <Shoe key={shoe._id} shoe={shoe} />)
+						}
+					</section>
+				</div>
+			</>
 		)
 	}
 }

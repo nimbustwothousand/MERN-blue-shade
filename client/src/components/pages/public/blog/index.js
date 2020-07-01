@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from "react-helmet";
 import axios from '../../../../utils/axios';
 import Loading from '../../../Loading';
 import Post from './Post';
@@ -22,14 +23,19 @@ const Blog = () => {
 		return (<Loading />)
 	} else {
 		return (
-			<div className="page blog">
-				Blog component
+			<>
+				<Helmet>
+					<title>Blog</title>
+				</Helmet>
+				<div className="blog">
+					Blog component
 				<section id="post-grid">
-					{
-						state.posts.map(post => <Post key={post._id} post={post} />)
-					}
-				</section>
-			</div>
+						{
+							state.posts.map(post => <Post key={post._id} post={post} />)
+						}
+					</section>
+				</div>
+			</>
 		)
 	}
 }

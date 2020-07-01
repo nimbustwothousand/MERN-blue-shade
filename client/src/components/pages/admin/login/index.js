@@ -27,7 +27,7 @@ const Login = () => {
 		)
 	} else {
 		return (
-			<main id="admin-wrapper" className="page admin">
+			<main id="wrapper" className="admin">
 				<div className="admin__container">
 					<h1>Login</h1>
 					<form onSubmit={handleSubmit}>

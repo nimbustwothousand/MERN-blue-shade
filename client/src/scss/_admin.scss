@@ -1,5 +1,5 @@
 .admin-menu {
-	height: 100%;
+	height: 100vh;
 	width: 200px;
 	position: fixed;
 	display: flex;
@@ -12,11 +12,6 @@
 	padding: .5rem 0;
 	background-color: $dark;
 	color: $white;
-	& + main#wrapper {
-		height: 100%;
-		margin-left: 200px;
-		padding: 1rem;
-	}
 		&::-webkit-scrollbar {
 		width: .5rem;
 		&-track {
