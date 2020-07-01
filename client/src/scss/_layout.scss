@@ -7,16 +7,71 @@
 	margin-bottom: 1.5rem;
 	&__navigation {
 		float: right;
-		text-align: right;
 		margin-top: auto;
 		margin-bottom: auto;
-		ul {
-			display: flex;
-			li {
-				margin: auto .5rem;
-				font-size: 1.5rem;
-				a {
-					color: $black;
+		.hamburger {
+			font-size: 2rem;
+			padding: 0 1rem;
+			cursor: pointer;
+			i {margin:auto}
+		}
+		nav {
+			height: 100%;
+			min-width: 225px;
+			max-width: 100%;
+			width: 50%;
+			position: fixed;
+			z-index: 99;
+			top: 0;
+			right: 0;
+			background-color: $primary;
+			opacity: 90%;
+			color: $white;
+			overflow-x: hidden;
+			overflow-y: hidden;
+			transition: 0.5s;
+			@include box-shadow;
+			#close-menu {
+				text-align: right;
+				margin-right: 10%;
+				margin-bottom: 1rem;
+				margin-top: 1rem;
+				font-size: 3rem;
+			}
+			ul {
+				text-align: right;
+				margin: auto;
+				margin-right: 10%;
+				li {
+					margin-bottom: 1.5rem;
+					font-size: 1.8rem;
+					a {
+						color: $white;
+					}
+				}
+			}
+		}
+		@include tablet {
+			.hamburger {display: none;}
+			nav.hidden {
+				display: flex;
+				height: unset;
+				position: unset;
+				width: unset;
+				color: unset;
+				background-color: unset;
+				box-shadow: unset;
+				#close-menu {display: none;}
+				ul {
+					display: flex;
+					li {
+						margin: auto;
+						font-size: 1.5rem;
+						padding-right: 1rem;
+						a {
+							color: unset;
+						}
+					}
 				}
 			}
 		}
