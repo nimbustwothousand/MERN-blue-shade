@@ -78,8 +78,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.24748737"
-     inkscape:cx="-562.63523"
-     inkscape:cy="-191.19744"
+     inkscape:cx="-1271.7623"
+     inkscape:cy="-225.54263"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -99,7 +99,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -123,24 +123,24 @@
        id="rect6003"
        width="255.05833"
        height="255.05833"
-       x="-691.20734"
-       y="217.85335" />
+       x="-232.57281"
+       y="333.31378" />
     <path
        style="opacity:1;fill:url(#pattern5983);fill-opacity:1;stroke:none;stroke-width:0.15927918;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m -666.65266,290.03331 v 85.0443 h 230.4658 v -85.0443 z"
        id="rect4520"
        inkscape:connector-curvature="0"
-       inkscape:export-xdpi="19.110001"
-       inkscape:export-ydpi="19.110001" />
+       inkscape:export-xdpi="95.911041"
+       inkscape:export-ydpi="95.911041" />
     <rect
-       style="opacity:1;fill:#74e5ff;fill-opacity:1;stroke:none;stroke-width:0.15927918;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#07d0ff;fill-opacity:1;stroke:none;stroke-width:0.15927918;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4518"
        width="230.46587"
        height="85.044647"
        x="-691.24518"
        y="315.68707"
-       inkscape:export-xdpi="19.110001"
-       inkscape:export-ydpi="19.110001" />
+       inkscape:export-xdpi="95.911041"
+       inkscape:export-ydpi="95.911041" />
     <rect
        y="340.58524"
        x="-668.91986"
@@ -148,16 +148,16 @@
        width="185.81519"
        id="rect5985"
        style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.15927918;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       inkscape:export-xdpi="19.110001"
-       inkscape:export-ydpi="19.110001" />
+       inkscape:export-xdpi="95.911041"
+       inkscape:export-ydpi="95.911041" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36.58935165px;line-height:1.25;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.69408804"
        x="-666.4455"
        y="371.26984"
        id="text6001"
-       inkscape:export-xdpi="19.110001"
-       inkscape:export-ydpi="19.110001"
+       inkscape:export-xdpi="95.911041"
+       inkscape:export-ydpi="95.911041"
        transform="scale(0.99985171,1.0001483)"><tspan
          sodipodi:role="line"
          x="-666.4455"

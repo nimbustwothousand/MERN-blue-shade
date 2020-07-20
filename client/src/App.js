@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import './App.min.css';
+import './css/App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 import { AuthContext } from './auth/context';

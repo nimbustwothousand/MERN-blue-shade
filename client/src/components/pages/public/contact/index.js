@@ -9,7 +9,7 @@ const Contact = () => {
 				<title>Contact Us</title>
 			</Helmet>
 			<div className="contact">
-				<h1>Contact Us</h1>
+				<h1 className="page-header">Contact Us</h1>
 				<div className="contact__get-in-touch row">
 					<div className="col-6 contact__blurb">
 						<h2>Get in Touch</h2>

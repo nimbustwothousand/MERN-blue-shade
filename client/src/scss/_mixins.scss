@@ -10,6 +10,12 @@
   }
 }
 
+@mixin xlarge {
+  @media (min-width: #{$xlarge-width}) {
+    @content;
+  }
+}
+
 @mixin box-shadow {
 	-webkit-box-shadow: 5px 5px 8px 0px scale-color($black,$alpha:-50%);
 	-moz-box-shadow: 5px 5px 8px 0px scale-color($black,$alpha:-50%);

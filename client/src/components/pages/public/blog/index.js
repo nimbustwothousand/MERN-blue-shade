@@ -28,8 +28,8 @@ const Blog = () => {
 					<title>Blog</title>
 				</Helmet>
 				<div className="blog">
-					Blog component
-				<section id="post-grid">
+					<h1 className="page-header">Blog</h1>
+					<section id="post-grid">
 						{
 							state.posts.map(post => <Post key={post._id} post={post} />)
 						}

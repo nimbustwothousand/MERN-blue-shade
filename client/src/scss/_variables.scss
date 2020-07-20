@@ -12,6 +12,7 @@ $colors: (primary:$primary,dark-mid:$dark-mid,dark:$dark,light-mid:$light-mid,li
 // BREAKPOINTS -----
 $tablet-width: 768px;
 $desktop-width: 1024px;
+$xlarge-width: 1200px;
 
 @function text-color($color) {
   @if (lightness($color) > 50) {

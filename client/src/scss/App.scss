@@ -18,6 +18,8 @@ body {
 			min-height: 100vh;//calc(100vh - 1rem);
 			margin: 0 auto 0 200px;
 			max-width: 1080px;
+			padding-left:.5rem;
+			padding-right:.5rem;
 		}
 	&.admin-page {
 		background-color: $white;
@@ -91,7 +93,7 @@ form {
 		input, textarea {
 			padding: .2rem;
 			border-radius: 5px;
-			border: none;
+			border: 1px solid $dark-mid;
 			margin: .5rem;
 		}
 		textarea {
@@ -107,4 +109,22 @@ form {
 }
 *[role="button"] {
 	cursor: pointer;
+}
+h1.page-header {
+	color: $dark;
+	opacity: .7;
+	font-size: 3rem;
+	text-shadow: -.5rem -.5rem $light-mid;
+	@include tablet {
+		font-size: 6rem;
+		text-shadow: -0.75rem -1rem $light-mid;
+	}
+	@include desktop {
+		font-size: 8rem;
+		text-shadow: -1rem -2rem $light-mid;
+	}
+	@include xlarge {
+		font-size: 10rem;
+		text-shadow: -3rem -4rem $light-mid;
+	}
 }

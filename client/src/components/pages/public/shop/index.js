@@ -28,8 +28,8 @@ const Shop = () => {
 					<title>Shop</title>
 				</Helmet>
 				<div className="shop">
-					Shop component
-				<section id="shoe-grid">
+					<h1 className="page-header">Shop</h1>
+					<section id="shoe-grid">
 						{
 							state.shoes.map(shoe => <Shoe key={shoe._id} shoe={shoe} />)
 						}
