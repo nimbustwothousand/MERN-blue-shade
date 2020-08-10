@@ -1,17 +1,11 @@
 @mixin tablet {
-  @media (min-width: #{$tablet-width}) {
+  @media (min-width: #{$breakpoint-md}) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (min-width: #{$desktop-width}) {
-    @content;
-  }
-}
-
-@mixin xlarge {
-  @media (min-width: #{$xlarge-width}) {
+  @media (min-width: #{$breakpoint-lg}) {
     @content;
   }
 }
@@ -27,3 +21,27 @@
 	-moz-box-shadow: 5px 5px 8px 0px scale-color($black,$alpha:-80%);
 	box-shadow: 5px 5px 8px 0px scale-color($black,$alpha:-80%);
 }
+
+@mixin link-style {
+		position: relative;
+		span {
+			z-index: 1;
+			position: relative;
+		}
+		&::after {
+			z-index:0;
+			content: "";
+			position: absolute;
+			left: -0.1px;
+			right: -0.1px;
+			bottom: 0;
+			height: 100%;
+			transform: scaleY(.3);
+			transition: transform .1s ease-in-out;
+			transform-origin: bottom;
+			background-color: $light;
+		}
+		&:hover::after {
+			transform: scaleY(1);
+		}
+  }

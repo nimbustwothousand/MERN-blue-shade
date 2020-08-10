@@ -47,6 +47,9 @@ ol[class] {
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
+a, a:hover, a:active, a:visited {
+  color: $black;
+}
 
 /* Make images easier to work with */
 img {
@@ -66,7 +69,13 @@ textarea,
 select {
   font: inherit;
 }
-
+button {
+  outline: 0;
+  border:0;
+  background-color: transparent;
+  cursor: pointer;
+  &:focus {outline: 0}
+}
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   * {

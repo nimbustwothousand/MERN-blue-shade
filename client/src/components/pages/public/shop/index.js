@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { Helmet } from "react-helmet";
-import axios from '../../../../utils/axios';
-import Loading from '../../../Loading';
-import Shoe from './Shoe';
+import React, { useEffect, useState } from 'react'
+import { Helmet } from "react-helmet"
+import axios from '../../../../utils/axios'
+import Loading from '../../../Loading'
+import Shoe from './Shoe'
+import Hero from './Hero'
 
 const Shop = () => {
 	const [state, setState] = useState({
@@ -27,14 +28,15 @@ const Shop = () => {
 				<Helmet>
 					<title>Shop</title>
 				</Helmet>
-				<div className="shop">
-					<h1 className="page-header">Shop</h1>
-					<section id="shoe-grid">
-						{
-							state.shoes.map(shoe => <Shoe key={shoe._id} shoe={shoe} />)
-						}
-					</section>
-				</div>
+				<section id="hero">
+					<Hero />
+				</section>
+				<section id="shoe-grid">
+					{
+						state.shoes.map(shoe => <Shoe key={shoe._id} shoe={shoe} />)
+					}
+				</section>
+
 			</>
 		)
 	}

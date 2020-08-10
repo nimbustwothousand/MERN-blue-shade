@@ -10,10 +10,8 @@
 		margin-top: auto;
 		margin-bottom: auto;
 		.hamburger {
-			font-size: 2rem;
-			padding: 0 1rem;
 			cursor: pointer;
-			i {margin:auto}
+			z-index: 999;
 		}
 		nav {
 			height: 100%;

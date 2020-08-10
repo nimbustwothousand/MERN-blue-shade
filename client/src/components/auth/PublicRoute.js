@@ -1,7 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import { Header, Footer } from "../layout";
-import { Helmet } from "react-helmet";
+import '../../css/main.css'
 
 const PublicRoute = ({ component: RouteComponent, ...rest }) => {
 	return (
@@ -10,11 +10,8 @@ const PublicRoute = ({ component: RouteComponent, ...rest }) => {
 			render={routeProps =>
 				(
 					<>
-						<Helmet>
-							<body className="page" />
-						</Helmet>
 						<Header />
-						<main id="wrapper">
+						<main>
 							<RouteComponent {...routeProps} />
 						</main>
 						<Footer />

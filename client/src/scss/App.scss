@@ -6,7 +6,9 @@
 @import 'layout';
 @import 'contact';
 @import 'shop';
+@import 'blog';
 @import 'admin';
+@import 'hamburger';
 
 
 body {
@@ -78,7 +80,7 @@ h6 {
 	font-size: 1.25rem;
 	margin-bottom: .75rem;
 }
-a {
+a, .link {
 	color: $dark-mid;
 	text-decoration: none;
 	&:hover{

@@ -1,5 +1,5 @@
 import Hero from './Hero';
-import Contact from './Contact';
 import Shop from './Shop';
+import ShapeDivider from '../../../../layout/ShapeDivider'
 
-export { Hero, Contact, Shop };
+export { Hero, Shop, ShapeDivider };

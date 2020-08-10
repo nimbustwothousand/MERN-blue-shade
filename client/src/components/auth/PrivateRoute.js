@@ -3,6 +3,7 @@ import { Route, Redirect } from "react-router-dom";
 import { AuthContext } from "../../auth/context";
 import { AdminHeader } from "../layout";
 import { Helmet } from "react-helmet";
+import '../../css/admin.css'
 
 const PrivateRoute = ({ component: RouteComponent, ...rest }) => {
 	const auth = useContext(AuthContext); // auth = { state, dispatch, ACTIONS }

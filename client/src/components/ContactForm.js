@@ -2,7 +2,7 @@ import React from 'react'
 
 const ContactForm = () => {
 	return (
-		<div className="contact__form">
+		<div className="contact-form">
 			<form onSubmit={(e) => e.preventDefault()}>
 				<div className="form__input">
 					<label htmlFor="name">Name</label>

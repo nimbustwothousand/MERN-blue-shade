@@ -1,53 +1,24 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
+import React from 'react'
+import Navigation from './footer/Navigation'
+import Social from './footer/Social'
+import Logo from './header/Logo'
 
 const Footer = () => {
 	if (window.location.pathname.match(/^\/admin/g)) return null;
 	return (
 		<footer className="footer">
-			<div className="footer__navigation">
-				<ul>
-					<li>
-						<Link to="/">
-							<i className="fas fa-chevron-right"></i>
-							Home
-						</Link>
-					</li>
-					<li>
-						<Link to="/shop">
-							<i className="fas fa-chevron-right"></i>
-							Shop
-						</Link>
-					</li>
-					<li>
-						<Link to="/blog">
-							<i className="fas fa-chevron-right"></i>
-							Blog
-						</Link>
-					</li>
-					<li>
-						<Link to="/contact">
-							<i className="fas fa-chevron-right"></i>
-							Contact
-						</Link>
-					</li>
-				</ul>
-			</div>
-			<div className="footer__social">
-				<ul>
-					<li>
-						<a href="https://twitter.com"><i className="fab fa-twitter"></i></a>
-					</li>
-					<li>
-						<a href="https://www.facebook.com"><i className="fab fa-facebook"></i></a>
-					</li>
-					<li>
-						<a href="https://www.instagram.com"><i className="fab fa-instagram"></i></a>
-					</li>
-					<li>
-						<a href="https://github.com/nimbustwothousand/MERN-blue-shade"><i className="fab fa-github"></i></a>
-					</li>
-				</ul>
+			<div className="footer-container">
+				<div className="footer-container-inner">
+					<div className="column">
+						<div className="logo-container">
+							<Logo />
+						</div>
+						<Social />
+					</div>
+					<div className="column">
+						<Navigation />
+					</div>
+				</div>
 			</div>
 		</footer>
 	)

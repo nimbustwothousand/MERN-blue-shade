@@ -1,24 +1,25 @@
-import React from 'react';
-import { Hero, Shop, Contact } from './sections';
-import { Helmet } from "react-helmet";
+import React from 'react'
+import { Wrapper } from '../../../layout'
+import { Hero, Shop } from './sections'
+import ContactForm from '../../../ContactForm'
 
 const Landing = () => {
 	return (
 		<>
-			<Helmet>
-				<title>Home</title>
-			</Helmet>
-			<div className="landing">
-				<section id="hero">
-					<Hero />
-				</section>
-				<section id="shop">
+			<section id="hero">
+				<Hero />
+			</section>
+			<section id="shop">
+				<Wrapper>
 					<Shop />
-				</section>
-				<section id="contact-us">
-					<Contact />
-				</section>
-			</div>
+				</Wrapper>
+			</section>
+			<section id="contact">
+				<Wrapper>
+					<h2>Contact Us</h2>
+					<ContactForm />
+				</Wrapper>
+			</section>
 		</>
 	)
 }
