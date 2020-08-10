@@ -333,3 +333,64 @@ form {
 				width: 100%;
 			}
 }
+#shoe-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	@include tablet {grid-template-columns: 1fr 1fr;}
+	@include desktop {grid-template-columns: repeat(4,1fr);}
+}
+.shoe-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	
+	padding: 1rem;
+	&-inner {
+		@include box-shadow;
+		border-radius: 2px;
+		background-color: lighten($color: $light, $amount: 13);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	&__info {
+		padding: 1rem;
+		display: flex;
+		flex-grow: 1;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+}
+.shoe {
+	&__label {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__color {
+		float: right;
+		width: 2rem;
+		height: 2rem;
+		margin-top: auto;
+		margin-bottom: auto;
+		border-radius: 50%;
+		border: 2px solid $black;
+	}
+	&__brand {
+		font-size: 1.5rem;
+		font-family:'Roboto Slab', serif;
+		font-weight: 600;
+	}
+	&__name {
+		font-size: 1.2rem;
+	}
+	&__description {font-size: .8rem}
+	&__sizes {
+		font-size: 1rem;
+	}
+	&__price {
+		background-color: $primary;
+		font-weight: 600;
+		width: 50%;
+		border-radius: 5px;
+		padding: .25rem;
+	}
+}
