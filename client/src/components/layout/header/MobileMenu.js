@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+import Hamburger from './Hamburger'
 import ROUTES from '../../../utils/routes'
 
 const MobileMenu = () => {
@@ -15,49 +16,25 @@ const MobileMenu = () => {
 	}
 	return (
 		<nav id="mobile-navigation">
-			<button
-				onClick={onClick}
-				className="hamburger hamburger--squeeze"
-				ref={burger}
-				type="button"
-				aria-label="Menu"
-				aria-controls="navigation"
-				aria-expanded={JSON.parse(state.open)}
-			>
-				<span className="hamburger-box">
-					<span className="hamburger-inner"></span>
-				</span>
-			</button>
+			<Hamburger onClick={onClick} ref={burger} open={JSON.parse(state.open)} className="hamburger hamburger--squeeze" />
 			<div id="mobile-nav-container" ref={mobileNav} className="hidden">
 				<ul className="mobile-menu">
 					<li className="mobile-menu__item">
-						<Link to={ROUTES.root}>Home</Link>
+						<Link to={ROUTES.root} onClick={onClick}>Home</Link>
 					</li>
 					<li className="mobile-menu__item">
-						<Link to={ROUTES.shop.root}>Shop</Link>
+						<Link to={ROUTES.shop.root} onClick={onClick}>Shop</Link>
 					</li>
 					<li className="mobile-menu__item">
-						<Link to={ROUTES.blog.root}>Blog</Link>
+						<Link to={ROUTES.blog.root} onClick={onClick}>Blog</Link>
 					</li>
 					<li className="mobile-menu__item">
-						<Link to={ROUTES.contact.root}>Contact</Link>
+						<Link to={ROUTES.contact.root} onClick={onClick}>Contact</Link>
 					</li>
 				</ul>
-				<button
-					onClick={onClick}
-					className="mobile-menu__close hamburger hamburger--squeeze"
-					ref={burger2}
-					type="button"
-					aria-label="Menu"
-					aria-controls="navigation"
-					aria-expanded={JSON.parse(state.open)}
-				>
-					<span className="hamburger-box">
-						<span className="hamburger-inner"></span>
-					</span>
-				</button>
+				<Hamburger onClick={onClick} ref={burger2} open={JSON.parse(state.open)} className="mobile-menu__close hamburger hamburger--squeeze" />
 			</div>
-		</nav>
+		</nav >
 	)
 }
 

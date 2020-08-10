@@ -113,8 +113,11 @@ header {
 			@include tablet {font-size: 1.8rem;};
 			text-align: center;
 			.mobile-menu {
-				&__item:hover {
-					a {color:$primary}
+				&__item {
+					a {display:block;width: 100%}
+					&:hover {
+						a {color:$primary}
+					}
 				}
 			}
 		}
@@ -195,7 +198,6 @@ footer {
 	}
 }
 #hero {
-	//padding-top:6rem;
 	padding-bottom: 12rem;
 	position: relative;
 	background: $light;
@@ -210,6 +212,8 @@ footer {
 	.hero-column {
 		width: 100%;
 		padding: 2rem;
+		//@include tablet {padding: 2rem 3rem}
+		@include desktop {padding: 2rem 4rem}
 	}
 	.hero-blurb {
 		display: flex;

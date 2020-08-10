@@ -430,6 +430,11 @@ header #mobile-nav-container .mobile-menu {
   }
 }
 
+header #mobile-nav-container .mobile-menu .mobile-menu__item a {
+  display: block;
+  width: 100%;
+}
+
 header #mobile-nav-container .mobile-menu .mobile-menu__item:hover a {
   color: #07d0ff;
 }
@@ -588,6 +593,12 @@ footer .footer-social-menu li:hover i {
 .hero-container .hero-column {
   width: 100%;
   padding: 2rem;
+}
+
+@media (min-width: 1112px) {
+  .hero-container .hero-column {
+    padding: 2rem 4rem;
+  }
 }
 
 .hero-container .hero-blurb {
