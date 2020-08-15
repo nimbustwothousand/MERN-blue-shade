@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Helmet } from "react-helmet"
 import axios from '../../../../utils/axios'
 import Loading from '../../../Loading'
-import Shoe from './Shoe'
-import Hero from './Hero'
+import { Hero, Shoe } from './sections'
 
 const Shop = () => {
 	const [state, setState] = useState({

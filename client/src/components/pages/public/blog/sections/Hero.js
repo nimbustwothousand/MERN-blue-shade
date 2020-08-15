@@ -1,5 +1,5 @@
 import React from 'react'
-import ShapeDivider from '../../../layout/ShapeDivider'
+import ShapeDivider from '../../../../layout/ShapeDivider'
 
 const Hero = () => {
 	return (

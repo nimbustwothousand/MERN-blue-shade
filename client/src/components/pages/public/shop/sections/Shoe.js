@@ -1,6 +1,5 @@
-import React from 'react';
-import ShoeColor from './ShoeColor';
-import ShoeThumbnail from './ShoeThumbnail';
+import React from 'react'
+import { ShoeColor, ShoeThumbnail } from './shoes'
 
 const Shoe = ({ shoe }) => {
 	return (
