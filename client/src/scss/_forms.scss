@@ -1,0 +1,50 @@
+form {
+	text-area, button {
+		width: 100%;
+	}
+	input {
+		margin: 0;
+	}
+	.input {
+		transition: all .5s ease;
+		position: relative;
+		display: flex;
+		margin: 1rem 0;
+		background-color: $light;
+		border-radius: 5px;
+		.input__field {
+			flex-grow: 1;
+			transition: all .5s ease;
+			line-height: 3rem;
+			outline: 0;
+			border: none;
+			border-radius: 5px;
+			background-color: $light;
+			margin: .5rem;
+		}
+		.input__label {
+			transition: all .5s ease;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			line-height: 1em;
+			&-content {
+				transition: all .5s ease;
+				margin-left: .5rem;
+			}
+		}
+	}
+	.input.input--filled {
+		background-color: $light;
+		.input__field {
+			line-height: 2rem;
+			margin-top: 2rem;
+			border-radius: 0;
+			background-color: $white;
+		}
+		.input__label {
+			top: 1rem;
+		}
+	}
+}

@@ -1,7 +1,7 @@
-import React from "react";
-import { Route } from "react-router-dom";
-import { Header, Footer } from "../layout";
-import '../../css/main.css'
+import React from "react"
+import { Route } from "react-router-dom"
+import { Helmet } from "react-helmet";
+import { Header, Footer } from "../layout"
 
 const PublicRoute = ({ component: RouteComponent, ...rest }) => {
 	return (
@@ -10,6 +10,9 @@ const PublicRoute = ({ component: RouteComponent, ...rest }) => {
 			render={routeProps =>
 				(
 					<>
+						<Helmet>
+							<body className="main-page" />
+						</Helmet>
 						<Header />
 						<main>
 							<RouteComponent {...routeProps} />
