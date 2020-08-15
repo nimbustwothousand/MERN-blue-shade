@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ContactForm = () => {
+const ContactForm = ({ variant = 'primary' }) => {
 	return (
 		<div className="contact-form">
 			<form onSubmit={(e) => e.preventDefault()}>
@@ -17,7 +17,7 @@ const ContactForm = () => {
 					<textarea name="message" />
 				</div>
 				<div>
-					<button className="btn btn-primary">Send</button>
+					<button className={`btn btn-${variant}`}>Send</button>
 				</div>
 			</form>
 		</div>

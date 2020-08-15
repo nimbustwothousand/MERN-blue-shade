@@ -4,12 +4,12 @@ import ShoeThumbnail from './ShoeThumbnail';
 
 const Shoe = ({ shoe }) => {
 	return (
-		<div className="shoe-container">
-			<div className="shoe-container-inner">
-				<div className="shoe-container__image">
+		<div className="grid-item">
+			<div className="grid-item-inner">
+				<div className="shoe__image">
 					<ShoeThumbnail primary={shoe.color} />
 				</div>
-				<div className="shoe-container__info">
+				<div className="shoe__info">
 					<div className="shoe__label">
 						<div>
 							<div className="shoe__brand">{shoe.brand}</div>

@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { Helmet } from "react-helmet";
-import axios from '../../../../utils/axios';
-import Loading from '../../../Loading';
-import Post from './Post';
+import React, { useEffect, useState } from 'react'
+import { Helmet } from "react-helmet"
+import axios from '../../../../utils/axios'
+import Loading from '../../../Loading'
+import Post from './Post'
+import Hero from './Hero'
 
 const Blog = () => {
 	const [state, setState] = useState({
@@ -27,14 +28,14 @@ const Blog = () => {
 				<Helmet>
 					<title>Blog</title>
 				</Helmet>
-				<div className="blog">
-					<h1 className="page-header">Blog</h1>
-					<section id="post-grid">
-						{
-							state.posts.map(post => <Post key={post._id} post={post} />)
-						}
-					</section>
-				</div>
+				<section id="hero">
+					<Hero />
+				</section>
+				<section id="post-grid">
+					{
+						state.posts.map(post => <Post key={post._id} post={post} />)
+					}
+				</section>
 			</>
 		)
 	}

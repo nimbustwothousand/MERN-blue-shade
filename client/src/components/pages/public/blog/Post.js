@@ -2,25 +2,20 @@ import React from 'react'
 
 const Post = ({ post }) => {
 	return (
-		<div className="post-container">
-			<div className="row">
-				<div className="col-10">
-					<div className="post-container__title">
-						<h3>
-							{post.title}
-						</h3>
-					</div>
-					<div className="post-container__excerpt">
-						{post.excerpt}[...]
-					</div>
+		<div className="grid-item">
+			<div className="grid-item-inner">
+				<div className="post__title">
+					<h3>
+						{post.title}
+					</h3>
 				</div>
-				<div className="col-2">
-					<div className="post-container__open">
-						<i className="fas fa-arrow-right link" role="button"></i>
-					</div>
+				<div className="post__excerpt">
+					{post.excerpt}[...]
+				</div>
+				<div className="post__open">
+					<i className="fas fa-arrow-right" role="button"></i>
 				</div>
 			</div>
-
 		</div>
 	)
 }
